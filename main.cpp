@@ -41,12 +41,15 @@ enum Rows   //List of field Rows
 };
 struct TicTacField
 {
- char visualField[3][3]{{nothing,nothing,nothing},{nothing,nothing,nothing},{nothing,nothing,nothing}} ; // Massive for visualisation on screen will be used at visualisation function later
+
  char pl1Mark='X';                //    player 1 will have possibility to choose mark for use |default is X
  char pl2MArk='O';                //    player 2 will have possibility to choose mark for use |default is O
  char nothing=' ';                //    You can fill all field with different background marks|defauld =SPASE
+ char visualField[3][3]{{nothing,nothing,nothing},{nothing,nothing,nothing},{nothing,nothing,nothing}} ; // Massive for visualisation on screen will be used at visualisation function later
+
  Conditions  field[3][3]={{EMPTY,EMPTY,EMPTY},{EMPTY,EMPTY,EMPTY},{EMPTY,EMPTY,EMPTY}};  //massive what our field is Originally is 0 everywhere
-int gameStatus=0;                 //0-In progress  1-is finised / ready to start
+
+ int gameStatus=0;                 //0-In progress  1-is finised / ready to start
 int whoWinner=0;                  //0 parity , 1 First player win,2 Second Player win
 };
 
@@ -57,7 +60,7 @@ struct SmThg
    {
        int integerData;
        float floatData;
-       char charData[2];
+       char charData;
    }Type;
 
    bool isInt=false;
